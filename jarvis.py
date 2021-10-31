@@ -13,16 +13,10 @@ from win32api import GetSystemMetrics
 import cv2
 from time import sleep
 email_da_list = {
-    'jai':'jaibadani28@gmail.com',
-    'manav':'manavbadani26@gmail.com',
-    'mom':'sonalbadani5@gmail.com',
-    'dad':'mayurbadani5@gmail.com'
+   'name_of_person':'email of the person'
 }
 whatsapplist = {
-    'jai':'+919867515436',
-    'manav':'+919833515191',
-    'dad':'+919833515199',
-    'mom':'+918369393969'
+    'name_of_person':'Mobile No. with country code'
 }
 os.system('cls')
 webbrowser.register('Chrome',
@@ -91,8 +85,8 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com',587)
     server.ehlo()
     server.starttls()
-    server.login('humanplaysofficial@gmail.com','shinchan5199')
-    server.sendmail('humanplaysofficial@gmail.com',to,content)
+    server.login('youremail','password')
+    server.sendmail('youremail',to,content)
     server.close()
 
 def takeCommand():
